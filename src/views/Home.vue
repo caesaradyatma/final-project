@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>List of all posts</h1>
+    <Highlights />
+    <hr>
+    <HeroBanner />
+    <hr>
+    <div class="row">
+      <div class="col-sm-8">
+        <Featured featuredTitle="Featured for Members" />
+      </div>
+      <div class="col-sm-4">
+        <PopularPosts />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import Highlights from '@/components/sections/Highlights.vue';
+import HeroBanner from '@/components/sections/HeroBanner.vue';
+import PopularPosts from '@/components/sections/PopularPosts.vue';
+import Featured from '@/components/sections/Featured.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
+    Highlights,
+    HeroBanner,
+    PopularPosts,
+    Featured,
   },
 };
 </script>
+
+<style>
+  section {
+    margin: 3%;
+  }
+</style>
+
