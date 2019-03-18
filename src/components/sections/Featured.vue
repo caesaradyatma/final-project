@@ -2,14 +2,14 @@
   <section class="featured">
     <div class="row">
       <div class="col-sm-12">
-        <h3><strong>{{featuredTitle}}</strong></h3>
+        <h3 class="text-title"><strong>{{featuredTitle}}</strong></h3>
         <small><a href="#">More ></a></small>
         <hr>
       </div>
       <div class="col-sm-12">
         <CardInv v-for="(value, key, index) in posts"
         :horizontal="true" :key="index" :title="value.title" :desc="value.desc"
-        :author="value.author" :date="value.date" style="margin-left:0;"/>
+        :author="value.author" :date="value.date" :id="index+1" style="margin-left:0;"/>
       </div>
     </div>
   </section>

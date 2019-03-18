@@ -2,7 +2,7 @@
   <section class="popular">
     <div class="row">
       <div class="col-sm-12">
-        <h3><strong>Popular Stuff</strong></h3>
+        <h3 class="text-title"><strong>Popular Stuff</strong></h3>
         <hr>
         <CardText v-for="(value, key, index) in posts" :horizontal="true" :order="index+1" :key="index"
         :title="value.title" :author="value.author" :date="value.date" />

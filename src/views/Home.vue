@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <h1>List of all posts</h1>
     <Highlights />
     <hr>
     <HeroBanner />

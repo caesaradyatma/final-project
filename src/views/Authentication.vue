@@ -54,7 +54,7 @@ export default {
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
-    height: 100vh;
+    /* height: 100%; */
     padding: 2%;
   }
 

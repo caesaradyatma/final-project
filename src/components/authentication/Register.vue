@@ -1,29 +1,31 @@
 <template>
-  <div class="register row">
-    <div class="col-sm-8">
-      <div class="register-form">
-        <h2><strong>Kata - kata mengajak ingin register</strong></h2>
-        <p>daftar lah tot</p>
-        <div class="row">
-          <div class="col-sm-6">
-            <input type="email"  id="email-input" class="form-control emailinput"
-            placeholder="Email" v-model="email">
-            <input type="username" name="username-input" id="username-input"
-            class="form-control usernameinput" placeholder="Username" v-model="username">
-            <input type="password" name="password-input" id="password-input"
-            class="form-control passwordinput" placeholder="Password" v-model="password">
-            <button name="register-button" id="register-button"
-            class="btn btn-success registerbutton" @click="register">Register</button>
-          </div>
-          <div class="col-sm-6">
+  <div class="register">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="register-form">
+          <h2><strong>Kata - kata mengajak ingin register</strong></h2>
+          <p>daftar lah tot</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <input type="email"  id="email-input" class="form-control emailinput"
+              placeholder="Email" v-model="email">
+              <input type="username" name="username-input" id="username-input"
+              class="form-control usernameinput" placeholder="Username" v-model="username">
+              <input type="password" name="password-input" id="password-input"
+              class="form-control passwordinput" placeholder="Password" v-model="password">
+              <button name="register-button" id="register-button"
+              class="btn btn-success registerbutton" @click="register">Register</button>
+            </div>
+            <div class="col-sm-6">
 
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="register-ad">
-        <h2><strong><i>"Habis cipok minta nenen, gak kerasa besok senen" - rizky jonru</i></strong></h2>
+      <div class="col-sm-4">
+        <div class="register-ad">
+          <h2><strong><i>"Habis cipok minta nenen, gak kerasa besok senen" - rizky jonru</i></strong></h2>
+        </div>
       </div>
     </div>
   </div>
@@ -59,7 +61,7 @@ export default {
   }
 
   .register {
-    padding-top:10%;
+    /* padding-top:10%; */
   }
 
   .register-form {

@@ -4,6 +4,8 @@ import Home from './views/Home.vue';
 import Authentication from './views/Authentication.vue';
 import UserDashboard from './views/UserDashboard.vue';
 import Post from './views/Post.vue';
+import CreatePost from './views/CreatePost.vue';
+import UpdatePost from './views/UpdatePost.vue';
 
 Vue.use(Router);
 
@@ -38,6 +40,16 @@ export default new Router({
       path: '/post/:id',
       name: 'post',
       component: Post,
+    },
+    {
+      path: '/create',
+      name: 'createpost',
+      component: CreatePost,
+    },
+    {
+      path: '/update',
+      name: 'updatepost',
+      component: UpdatePost,
     },
   ],
 });

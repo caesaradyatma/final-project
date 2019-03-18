@@ -1,9 +1,7 @@
 <template>
-  <div id="app" class="container-fluid">
-    <Navbar/>
-    <div>
-      <router-view/>
-    </div>
+  <div id="app">
+    <Navbar />
+    <router-view class="container-fluid" />
   </div>
 </template>
 
@@ -19,7 +17,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -34,5 +32,15 @@ export default {
       color: #42b983;
     }
   }
+}
+
+.text-title{
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
+  font-weight: bold;
+}
+
+.post-content{
+  text-align:justify;
 }
 </style>

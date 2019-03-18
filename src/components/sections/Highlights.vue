@@ -10,11 +10,8 @@
           :horizontal="true" :key="index" :title="value.title" :desc="value.desc" :id="index+1" />
         </div>
         <div class="col-sm-3">
-          <Card :vertical="true" :title="posts.post4.title"
-          :desc="posts.post4.desc" :id="posts.post4.id" />
-        </div>
-        <div class="col-sm-12">
-          <a href="#">SEE ALL FEATURED ></a>
+          <Card :vertical="true" :title="posts.post2.title"
+          :desc="posts.post2.desc" :id="posts.post2.id" />
         </div>
       </div>
     </section>
@@ -44,20 +41,6 @@ export default {
           author: 'tukang ngarang',
           date: '2019-03-05',
           id: 2,
-        },
-        post3: {
-          title: '1914 translation by H. Rackham 3',
-          desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-          author: 'tukang ngarang',
-          date: '2019-03-05',
-          id: 3,
-        },
-        post4: {
-          title: '1914 translation by H. Rackham 4',
-          desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-          author: 'tukang ngarang',
-          date: '2019-03-05',
-          id: '4',
         },
       },
     };
