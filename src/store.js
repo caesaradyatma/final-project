@@ -5,14 +5,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    auth: false,
+    auth: '',
   },
   mutations: {
-    login(state,auth) {
+    login(state, auth) {
       state.auth = auth;
     },
   },
-  actions: {
-
+  getters: {
+    auth: state => state.auth,
   },
 });

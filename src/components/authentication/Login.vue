@@ -11,6 +11,8 @@
           class="form-control passwordinput" placeholder="Password">
           <button name="register-button" id="register-button"
           class="btn btn-success loginbutton">Login</button>
+          <button @click="log">test</button>
+          <p>You chose {{$store.getters.auth}}</p>
         </div>
       </center>
     </div>
@@ -26,6 +28,9 @@ export default {
     registerForm() {
       this.registerSeen = true,
       this.loginSeen = false
+    },
+    log() {
+      this.$store.commit('login', 'kontol');
     },
   },
 };
