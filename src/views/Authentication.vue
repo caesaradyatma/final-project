@@ -50,10 +50,10 @@ export default {
 
 <style scoped>
   .authentication {
-    background-image:url('https://cdn.vox-cdn.com/thumbor/ffqNXHDvkRBy5PMkA6Z-KQtOjJ8=/0x0:2874x2126/1200x800/filters:focal(1208x834:1666x1292)/cdn.vox-cdn.com/uploads/chorus_image/image/59841589/FullSizeRender_24.0.jpg');
+    /* background-image:url('https://cdn.vox-cdn.com/thumbor/ffqNXHDvkRBy5PMkA6Z-KQtOjJ8=/0x0:2874x2126/1200x800/filters:focal(1208x834:1666x1292)/cdn.vox-cdn.com/uploads/chorus_image/image/59841589/FullSizeRender_24.0.jpg');
     background-position:center;
     background-size:cover;
-    background-repeat:no-repeat;
+    background-repeat:no-repeat; */
     /* height: 100%; */
     padding: 2%;
   }

@@ -3,8 +3,6 @@
     <div class="row">
       <div class="col-sm-12">
         <h3 class="text-title"><strong>{{featuredTitle}}</strong></h3>
-        <small><a href="#">More ></a></small>
-        <hr>
       </div>
       <div class="col-sm-12">
         <CardInv v-for="(value, key, index) in posts"

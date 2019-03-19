@@ -24,18 +24,12 @@ export default {
     horizontal: Boolean,
     featured: Boolean,
     post: Object,
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
   .postheader_image {
-    height:100%;
     width:100%;
   }
-
-  .postheader {
-    height:100%;
-  }
 </style>
-

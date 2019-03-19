@@ -13,14 +13,18 @@
         </div>
         <div class="col-sm-12">
           <hr>
-          <a :href="'post/' + id" class="btn btn-primary">Go somewhere</a>
+          <router-link :to="'/post/' + id" class="btn btn-primary" v-if="user">Update Content</router-link>
+          <router-link :to="'/post/' + id" class="btn btn-primary" v-else>Go Somewhere</router-link>
+          <!-- <a :href="'post/' + id" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
       <div class="vertical" v-if="vertical">
         <img class="card-img-top" src="https://st.motortrend.com/uploads/sites/5/2017/02/2016-BMW-M2-Coupe-front-three-quarter-burnout1.jpg" alt="Card image cap">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a :href="'post/' + id" class="btn btn-primary">Go somewhere</a>
+        <router-link :to="'/post/' + id" class="btn btn-primary" v-if="user">Update Content</router-link>
+        <router-link :to="'/post/' + id" class="btn btn-primary" v-else>Go Somewhere</router-link>
+        <!-- <a :href="'post/' + id" class="btn btn-primary">Go somewhere</a> -->
       </div>
     </div>
   </div>

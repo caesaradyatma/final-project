@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-body">
-      <a :href="'post/' + id">
+      <a :href="'/post/' + id">
         <div class="row horizontal" v-if="horizontal">
           <div class="col-sm-4">
             <img class="card-img-top" src="https://st.motortrend.com/uploads/sites/5/2017/02/2016-BMW-M2-Coupe-front-three-quarter-burnout1.jpg" alt="Card image cap">
@@ -13,7 +13,7 @@
         </div>
       </a>
       <div class="vertical" v-if="vertical">
-        <a :href="'post/' + id">
+        <a :href="'/post/' + id">
           <img class="card-img-top" src="https://st.motortrend.com/uploads/sites/5/2017/02/2016-BMW-M2-Coupe-front-three-quarter-burnout1.jpg" alt="Card image cap">
           <h5 class="card-title"><strong>{{title}}</strong></h5>
           <p class="card-text">{{desc}}</p>

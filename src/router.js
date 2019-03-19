@@ -1,55 +1,83 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Authentication from './views/Authentication.vue';
-import UserDashboard from './views/UserDashboard.vue';
-import Post from './views/Post.vue';
-import CreatePost from './views/CreatePost.vue';
-import UpdatePost from './views/UpdatePost.vue';
+import UserRouter from './UserRouter';
+import PublicRouter from './PublicRouter';
 
 Vue.use(Router);
 
-export default new Router({
+let allRoutes = [];
+allRoutes = allRoutes.concat(UserRouter, PublicRouter);
+
+const routes = allRoutes;
+
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
-    {
-      path: '/authentication',
-      name: 'auth',
-      component: Authentication,
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: UserDashboard,
-    },
-    {
-      path: '/post/:id',
-      name: 'post',
-      component: Post,
-    },
-    {
-      path: '/create',
-      name: 'createpost',
-      component: CreatePost,
-    },
-    {
-      path: '/update',
-      name: 'updatepost',
-      component: UpdatePost,
-    },
-  ],
+  routes,
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.auth)) {
+    if (hasSession) {
+      next();
+    } else {
+      next('/404');
+    }
+  } else {
+    next();
+  }
+});
+
+export default router;
+
+// export default new Router({
+//   mode: 'history',
+//   base: process.env.BASE_URL,
+//   routes: [
+//     {
+//       path: '/',
+//       name: 'home',
+//       component: Home,
+//     },
+//     {
+//       path: '/about',
+//       name: 'about',
+//       component: About,
+//     },
+//     {
+//       path: '/authentication',
+//       name: 'auth',
+//       component: Authentication,
+//     },
+//     {
+//       path: '/user',
+//       name: 'dashboard',
+//       component: UserDashboard,
+//     },
+//     {
+//       path: '/post/:id',
+//       name: 'post',
+//       component: Post,
+//     },
+//     {
+//       path: '/create',
+//       name: 'createpost',
+//       component: CreatePost,
+//     },
+//     {
+//       path: '/update',
+//       name: 'updatepost',
+//       component: UpdatePost,
+//     },
+//     {
+//       path: '/user/setting',
+//       name: 'usersetting',
+//       component: UserSetting,
+//     },
+//     {
+//       path: '/post/:id/setting',
+//       name: 'postsetting',
+//       component: PostSetting,
+//     },
+//   ],
+// });
