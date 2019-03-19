@@ -19,7 +19,8 @@
             <h4>Email</h4>
             <h4>Phone</h4>
             <h4>Gender</h4>
-            <router-link to="/user/setting" class="btn btn-primary">Modify</router-link>
+            <router-link to="setting" class="btn btn-primary">Modify</router-link>
+            <a href="setting" class="btn btn-primary">Modify</a>
           </div>
         </div>
       </div>

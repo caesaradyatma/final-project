@@ -8,6 +8,9 @@ const routes = [
     path: '/user',
     name: 'dashboard',
     component: UserDashboard,
+    meta: {
+      auth: true,
+    },
     children: [
       {
         path: 'setting',

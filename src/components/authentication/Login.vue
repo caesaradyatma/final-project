@@ -6,14 +6,11 @@
         <center>
           <div class="login-form">
             <h2 class="text-title">WELCOME BACK</h2>
-            <input type="email" id="email-input" class="form-control emailinput"
+            <input type="email" v-model="email" class="form-control emailinput"
             placeholder="Email">
-            <input type="password" id="password-input"
+            <input type="password" v-model="password"
             class="form-control passwordinput" placeholder="Password">
-            <button name="register-button" id="register-button"
-            class="btn btn-success loginbutton">Login</button>
-            <button @click="log">test</button>
-            <p>You chose {{$store.getters.auth}}</p>
+            <button class="btn btn-success loginbutton" @click="login">Login</button>
           </div>
         </center>
       </div>
@@ -26,13 +23,24 @@
 
 export default {
   name: 'login',
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
   methods: {
     registerForm() {
       this.registerSeen = true,
       this.loginSeen = false
     },
-    log() {
-      this.$store.commit('login', 'wew');
+    login() {
+      if (this.email === this.$store.state.email && this.password === this.$store.state.password) {
+        this.$store.commit('login');
+        if (this.$store.state.vuexAuth) {
+          this.$router.push('dashboard');
+        }
+      }
     },
   },
 };

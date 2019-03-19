@@ -6,13 +6,18 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     auth: '',
+    vuexAuth: false,
+    email: 'test@email.com',
+    password: 'test',
   },
   mutations: {
-    login(state, auth) {
-      state.auth = auth;
+    login(state) {
+      state.vuexAuth = true;
     },
   },
-  getters: {
-    auth: state => state.auth,
+  actions: {
+    login(context) {
+      context.commit('login');
+    },
   },
 });

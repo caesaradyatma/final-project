@@ -16,9 +16,11 @@ const router = new Router({
   routes,
 });
 
+// const { vuexAuth } = this.$store.state;
+
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.auth)) {
-    if (hasSession) {
+    if (this.$store.stat.vuexAuth) {
       next();
     } else {
       next('/404');
