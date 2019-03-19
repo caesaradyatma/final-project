@@ -12,7 +12,7 @@
           class="btn btn-primary auth-redirect">Already have an account? Click Here</button>
           <button v-on:click="registerForm"
           v-if="loginSeen"
-          class="btn btn-primary auth-redirect">New Around Here? Be a Part of our Family</button>
+          class="btn btn-primary auth-redirect">New Around Here?</button>
         </center>
       </div>
     </div>

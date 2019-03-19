@@ -9,7 +9,6 @@
         <router-link to="/" class="nav-item nav-link">Home</router-link>
         <router-link to="/about" class="nav-item nav-link">About</router-link>
         <router-link to="/authentication" class="nav-item nav-link">Register</router-link>
-        <a class="nav-item nav-link" href="#">Pricing</a>
       </div>
     </div>
   </nav>
