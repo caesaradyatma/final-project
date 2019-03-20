@@ -36,9 +36,11 @@ export default {
     },
     login() {
       if (this.email === this.$store.state.email && this.password === this.$store.state.password) {
-        this.$store.commit('login');
-        if (this.$store.state.vuexAuth) {
-          this.$router.push('dashboard');
+        //this.$store.commit('login');
+        localStorage.setItem('auth', 1);
+        if (localStorage.getItem('auth') == 1) {
+          console.log('berhasil login');
+          location.replace('/user');
         }
       }
     },

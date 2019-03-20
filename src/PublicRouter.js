@@ -21,13 +21,8 @@ const routes = [
     component: Authentication,
   },
   {
-    path: '/post/:id',
-    name: 'post',
-    component: Post,
-  },
-  {
-    path: '/404',
-    name: 'notfound',
+    path: '*',
+    name: 'notfoundjuga',
     component: NotFound,
   },
 ];

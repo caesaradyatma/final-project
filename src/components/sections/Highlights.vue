@@ -33,7 +33,7 @@ export default {
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           author: 'penulis',
           date: '2019-03-05',
-          id: '1',
+          id: 1,
         },
         post2: {
           title: '1914 translation by H. Rackham 2',

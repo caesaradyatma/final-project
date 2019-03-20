@@ -32,17 +32,17 @@
         <div class="col-sm-4">
           <CardInv v-for="(value, key, index) in posts"
         :horizontal="true" :key="index" :title="value.title" :desc="value.desc"
-        :author="value.author" :date="value.date" :id="index+1" style="margin-left:0;"/>
+        :author="value.author" :date="value.date" :id="index+1" :user="true" style="margin-left:0;"/>
         </div>
         <div class="col-sm-4">
           <CardInv v-for="(value, key, index) in posts"
         :horizontal="true" :key="index" :title="value.title" :desc="value.desc"
-        :author="value.author" :date="value.date" :id="index+1" style="margin-left:0;"/>
+        :author="value.author" :date="value.date" :id="index+1" :user="true" style="margin-left:0;"/>
         </div>
         <div class="col-sm-4">
           <CardInv v-for="(value, key, index) in posts"
         :horizontal="true" :key="index" :title="value.title" :desc="value.desc"
-        :author="value.author" :date="value.date" :id="index+1" style="margin-left:0;"/>
+        :author="value.author" :date="value.date" :id="index+1" :user="true" style="margin-left:0;"/>
         </div>
       </div>
     </section>

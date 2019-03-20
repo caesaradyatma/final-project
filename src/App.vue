@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <Navbar />
+    <UserNavbar v-if="loggedin" />
+    <Navbar v-else />
     <router-view class="container-fluid" />
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/navigation/Navbar.vue';
+import UserNavbar from '@/components/navigation/UserNavbar.vue';
 
 export default {
   name: 'app',
   components: {
     Navbar,
+    UserNavbar,
+  },
+  data() {
+    return {
+      loggedin: this.auth(),
+    };
+  },
+  methods: {
+    auth() {
+      if (localStorage.getItem('auth') == 1) {
+        return true;
+      } return false;
+    },
   },
 };
 </script>

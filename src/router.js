@@ -20,10 +20,11 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.auth)) {
-    if (this.$store.stat.vuexAuth) {
+    console.log(localStorage.getItem('auth') == 1);
+    if (localStorage.getItem('auth') == 1) {
       next();
     } else {
-      next('/404');
+      next('/');
     }
   } else {
     next();

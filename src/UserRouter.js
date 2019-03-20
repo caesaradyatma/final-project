@@ -2,11 +2,11 @@ import UserDashboard from './views/UserDashboard.vue';
 import CreatePost from './views/CreatePost.vue';
 import UserSetting from './views/UserSetting.vue';
 import PostSetting from './views/PostSetting.vue';
+import Post from './views/Post.vue';
 
 const routes = [
   {
-    path: '/user',
-    name: 'dashboard',
+    path: '/user/:id',
     component: UserDashboard,
     meta: {
       auth: true,
@@ -15,25 +15,21 @@ const routes = [
       {
         path: 'setting',
         component: UserSetting,
-        meta: {
-          auth: true,
-        },
       },
       {
         path: 'create',
         component: CreatePost,
-        meta: {
-          auth: true,
-        },
       },
       {
         path: 'update',
         component: PostSetting,
-        meta: {
-          auth: true,
-        },
       },
     ],
+  },
+  {
+    path: '/post/:id',
+    name: 'post',
+    component: Post,
   },
 ];
 

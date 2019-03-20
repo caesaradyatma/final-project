@@ -41,6 +41,7 @@ export default {
     author: String,
     date: String,
     id: Number,
+    user: Boolean,
   },
 };
 </script>
