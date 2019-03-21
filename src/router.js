@@ -20,7 +20,6 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.auth)) {
-    console.log(localStorage.getItem('auth') == 1);
     if (localStorage.getItem('auth') == 1) {
       next();
     } else {

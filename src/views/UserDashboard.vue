@@ -19,14 +19,25 @@
             <h4>Email</h4>
             <h4>Phone</h4>
             <h4>Gender</h4>
-            <router-link to="setting" class="btn btn-primary">Modify</router-link>
-            <a href="setting" class="btn btn-primary">Modify</a>
           </div>
         </div>
       </div>
       <hr>
       <div class="row">
         <div class="col-sm-12">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <router-link to="myposts" class="nav-link mypost-link">MY POSTS</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="setting" class="nav-link modify-profile">MODIFY PROFILE</router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-12">
+          <router-view></router-view>
+        </div>
+        <!-- <div class="col-sm-12">
           <h2 class="text-title">MY POSTS</h2>
         </div>
         <div class="col-sm-4">
@@ -43,7 +54,7 @@
           <CardInv v-for="(value, key, index) in posts"
         :horizontal="true" :key="index" :title="value.title" :desc="value.desc"
         :author="value.author" :date="value.date" :id="index+1" :user="true" style="margin-left:0;"/>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
@@ -85,5 +96,13 @@ export default {
 
   .profile-picture {
     width: 100%;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(175, 175, 175, 0.8);
+  }
+
+  .nav-link:active {
+    background-color: rgba(216, 214, 214, 0.8);
   }
 </style>

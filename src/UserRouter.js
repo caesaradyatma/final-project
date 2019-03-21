@@ -3,6 +3,7 @@ import CreatePost from './views/CreatePost.vue';
 import UserSetting from './views/UserSetting.vue';
 import PostSetting from './views/PostSetting.vue';
 import Post from './views/Post.vue';
+import Highlights from './components/sections/Highlights.vue';
 
 const routes = [
   {
@@ -17,12 +18,8 @@ const routes = [
         component: UserSetting,
       },
       {
-        path: 'create',
-        component: CreatePost,
-      },
-      {
-        path: 'update',
-        component: PostSetting,
+        path: 'myposts',
+        component: Highlights,
       },
     ],
   },
@@ -30,6 +27,18 @@ const routes = [
     path: '/post/:id',
     name: 'post',
     component: Post,
+  },
+  {
+    path: '/post/:id/update',
+    name: 'updatepost',
+    component: PostSetting,
+    auth: true,
+  },
+  {
+    path: '/post/create',
+    name: 'create',
+    component: CreatePost,
+    auth: true,
   },
 ];
 
